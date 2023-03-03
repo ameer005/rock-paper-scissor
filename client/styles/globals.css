@@ -20,3 +20,57 @@
     line-height: 1;
   }
 }
+
+.bg-gradient {
+  background: radial-gradient(
+    ellipse at top,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%) 65%
+  );
+}
+
+.rock-gradient {
+  background: radial-gradient(circle at top, #dc2e4e 84%, #dd405d 84%, #dd405d);
+}
+
+.paper-gradient {
+  background: radial-gradient(
+    circle at top,
+    hsl(230, 89%, 62%) 84%,
+    hsl(230, 89%, 65%) 84%,
+    hsl(230, 89%, 65%)
+  );
+}
+
+.scissor-gradient {
+  background: radial-gradient(
+    circle at top,
+    hsl(39, 89%, 49%) 84%,
+    hsl(40, 84%, 53%) 84%,
+    hsl(40, 84%, 53%)
+  );
+}
+
+.ut-animation {
+  @apply transition-all duration-200;
+}
+
+.waiting {
+  height: 11rem;
+  width: 11rem;
+  transform: scale(1);
+  animation: waitingAnimation 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes waitingAnimation {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}

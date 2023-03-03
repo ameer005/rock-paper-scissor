@@ -9,7 +9,7 @@ const barlow = Barlow_Semi_Condensed({
 const Layout = ({ children }) => {
   return (
     <div
-      className={`${barlow.variable} font-barlow bg-colorBg min-h-screen text-sm text-white`}
+      className={`${barlow.variable} font-barlow bg-gradient min-h-screen text-sm text-white`}
     >
       <main>{children}</main>
     </div>

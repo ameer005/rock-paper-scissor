@@ -13,7 +13,7 @@ module.exports = {
       },
       colors: {
         colorOrange: "hsl(39, 89%, 49%)",
-        colorOrange2: " hsl(40, 84%, 53%)",
+        colorOrange2: "hsl(40, 84%, 53%)",
         colorBlue: "hsl(230, 89%, 62%)",
         colorBlue2: "hsl(230, 89%, 65%)",
         colorRed: "hsl(349, 71%, 52%)",

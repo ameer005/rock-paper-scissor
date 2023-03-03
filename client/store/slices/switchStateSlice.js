@@ -1,6 +1,5 @@
 const switchStateSlice = (set, get) => ({
-  slideHeading: "",
-  activeChat: null,
+  gameMode: null, // computer and pvp
   setOptions: (state) => {
     set(state);
   },
