@@ -46,7 +46,7 @@ io.on("connection", (socket) => {
 
   socket.on("send-move", (roomId, move, cb) => {
     if (io.sockets.adapter.rooms.get(roomId)) {
-      if (io.sockets.adapter.rooms.get(roomId).size <= 2) {
+      if (io.sockets.adapter.rooms.get(roomId).size === 2) {
         socket.to(roomId).emit("receive-move", move);
         cb({ status: "success" });
       } else {

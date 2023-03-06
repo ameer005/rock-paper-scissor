@@ -21,6 +21,7 @@ const PvpMode = () => {
   const [currentWinner, setCurrentWinner] = useState(null);
   const [overallWinner, setOverallWinner] = useState(null);
 
+  // getting opponent's move
   useEffect(() => {
     socket.on("receive-move", (move) => {
       setOpponentChoice(move);
@@ -46,6 +47,7 @@ const PvpMode = () => {
     }
   }, [yourChoice]);
 
+  // calculating overall winner
   useEffect(() => {
     if (yourWins.length === 3) {
       setOverallWinner("you");
@@ -57,7 +59,7 @@ const PvpMode = () => {
     }
   }, [yourWins, opponentWins]);
 
-  // deciding winner
+  // calculation round winner
   useEffect(() => {
     if (yourChoice === null || opponentChoice === null) return;
     roundWinner();
@@ -92,7 +94,7 @@ const PvpMode = () => {
         <BoardHeader
           yourWins={yourWins}
           opponentWins={opponentWins}
-          opponentTag="Computer"
+          opponentTag="Opponent"
         />
       </div>
 
@@ -142,7 +144,7 @@ const PvpMode = () => {
         )}
       </div>
 
-      {overallWinner && <GameOverModal />}
+      {overallWinner && <GameOverModal overallWinner={overallWinner} />}
     </div>
   );
 };

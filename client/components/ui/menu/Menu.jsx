@@ -1,9 +1,18 @@
 import useStore from "@/store/useStore";
+import { useEffect } from "react";
 
 import Logo from "../logo/Logo";
 
 const Menu = () => {
   const setOptions = useStore((state) => state.setOptions);
+  const setDataState = useStore((state) => state.setDataState);
+
+  // pvp mode cleanup
+  useEffect(() => {
+    setOptions({ roomJoined: false });
+    setDataState({ roomId: null });
+  }, []);
+
   return (
     <div className="flex h-full items-center justify-center ">
       <div className="flex w-full max-w-[30rem] flex-col items-center rounded-lg bg-white py-8 px-5">
