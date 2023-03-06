@@ -11,16 +11,16 @@ const GameControls = ({ setYourChoice }) => {
         priority={true}
         alt="triangle"
       />
-      <button onClick={() => setYourChoice(0)} className="absolute left-[18%]">
+      <button onClick={() => setYourChoice(1)} className="absolute left-[18%]">
         <OptionButton icon={"paper"} globalStyle={"hover:scale-105"} />
       </button>
 
-      <button onClick={() => setYourChoice(1)} className="absolute right-[18%]">
+      <button onClick={() => setYourChoice(2)} className="absolute right-[18%]">
         <OptionButton icon={"scissor"} globalStyle={"hover:scale-105"} />
       </button>
 
       <button
-        onClick={() => setYourChoice(2)}
+        onClick={() => setYourChoice(0)}
         className="absolute bottom-0 left-[50%] -translate-x-[50%] "
       >
         <OptionButton icon={"rock"} globalStyle={" hover:scale-105"} />

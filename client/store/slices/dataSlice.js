@@ -1,18 +1,17 @@
-// import { io } from "socket.io-client";
+import { io } from "socket.io-client";
 
-// let URL = "https://chekt-backend.up.railway.app";
+let URL = "https://chekt-backend.up.railway.app";
 
-// if (process.env.NODE_ENV !== "production") {
-//   URL = "http://127.0.0.1:5000";
-// }
+if (process.env.NODE_ENV !== "production") {
+  URL = "http://127.0.0.1:5000";
+}
 
-// const dataSlice = (set, get) => ({
-//   chats: [],
-//   socket: io(URL),
-//   activeUsers: [],
-//   setDataState: (modal) => {
-//     set(modal);
-//   },
-// });
+const dataSlice = (set, get) => ({
+  socket: io(URL),
+  roomId: null,
+  setDataState: (modal) => {
+    set(modal);
+  },
+});
 
-// export default dataSlice;
+export default dataSlice;
