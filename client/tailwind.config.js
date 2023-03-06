@@ -30,6 +30,15 @@ module.exports = {
         colorBg: "hsl(214, 47%, 23%)",
         colorBg2: "hsl(237, 49%, 15%)",
       },
+
+      screens: {
+        "2xl": { max: "1200px" },
+        xl: { max: "1000px" },
+        lg: { max: "750px" },
+        md: { max: "650px" },
+        sm: { max: "500px" },
+        xs: { max: "340px" },
+      },
     },
   },
   plugins: [],

@@ -9,8 +9,8 @@ export default function Home() {
   const roomJoined = useStore((state) => state.roomJoined);
 
   return (
-    <div className="flex justify-center">
-      <div className="h-screen w-full max-w-[55rem] py-14">
+    <div className="flex justify-center px-4">
+      <div className="min-h-screen w-full max-w-[55rem] py-14">
         {!gameMode ? <Menu /> : null}
         {gameMode == "computer" ? <ComputerMode /> : null}
         {gameMode == "pvp" ? roomJoined ? <PvpMode /> : <Room /> : null}

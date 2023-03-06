@@ -17,7 +17,7 @@ const BoardHeader = ({ yourWins, opponentWins, opponentTag }) => {
 
   return (
     <div className="flex items-center gap-4">
-      <div className="flex flex-1 justify-center rounded-lg border-2 border-white py-6">
+      <div className="border-colorText flex flex-1 justify-center rounded-lg border-2 py-6">
         <div className="flex flex-col items-center gap-2 text-xl font-semibold">
           <div>You</div>
           <div className="flex gap-2">{renderStars(yourWins)}</div>
@@ -26,7 +26,7 @@ const BoardHeader = ({ yourWins, opponentWins, opponentTag }) => {
       <div>
         <Logo />
       </div>
-      <div className="flex flex-1 justify-center rounded-lg border-2 border-white py-6">
+      <div className="border-colorText flex flex-1 justify-center rounded-lg border-2 py-6">
         <div className="flex flex-col items-center gap-2 text-xl font-semibold">
           <div>{opponentTag}</div>
           <div className="flex gap-2">{renderStars(opponentWins)}</div>
