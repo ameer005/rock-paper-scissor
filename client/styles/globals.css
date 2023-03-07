@@ -56,8 +56,6 @@
 }
 
 .waiting {
-  height: 11rem;
-  width: 11rem;
   transform: scale(1);
   animation: waitingAnimation 1s;
   animation-iteration-count: infinite;

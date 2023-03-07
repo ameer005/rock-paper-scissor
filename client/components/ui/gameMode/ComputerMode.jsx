@@ -64,8 +64,8 @@ const ComputerMode = () => {
   };
 
   return (
-    <div className="flex h-full flex-col">
-      <div className="mb-16">
+    <div className="flex flex-col">
+      <div className="mb-16 sm:mb-6 lg:mb-12">
         <BoardHeader
           yourWins={yourWins}
           opponentWins={opponentWins}
@@ -73,39 +73,40 @@ const ComputerMode = () => {
         />
       </div>
 
-      <div className="flex h-full flex-1 justify-center">
+      <div className="flex h-[25.5rem] justify-center">
         {yourChoice === null ? (
           // Game Controls
           <GameControls setYourChoice={setYourChoice} />
         ) : (
-          <div className="relative flex h-full w-full max-w-[45rem] items-center justify-center gap-36">
+          <div className="relative flex h-full w-full max-w-[45rem] items-center justify-center gap-36 sm:justify-between sm:gap-0 sm:px-4 lg:gap-24">
             <div>
               <OptionButton
                 icon={options[yourChoice]}
-                globalStyle={"scale-150"}
+                globalStyle={"scale-150 lg:scale-125 sm:scale-105"}
               />
             </div>
 
             {opponentChoice === null ? (
               <div className="">
-                <div className="bg-colorText waiting rounded-full"></div>
+                <div className="bg-colorText waiting h-44 w-44 rounded-full sm:h-28 sm:w-28 md:h-40 md:w-40"></div>
               </div>
             ) : (
               <div
                 className={`transition-all duration-[.8s] ${
-                  currentWinner && "ml-56"
+                  currentWinner && "ml-56 md:ml-0 lg:ml-32 "
                 }`}
               >
                 <OptionButton
                   icon={options[opponentChoice]}
-                  globalStyle={"scale-150"}
+                  globalStyle={"scale-150 lg:scale-125 sm:scale-105"}
                 />
               </div>
             )}
 
             {/* reault declaration block */}
             <div
-              className={` ut-animation absolute top-[50%] left-[50%] z-20 -translate-y-[50%] -translate-x-[50%] text-4xl font-bold uppercase delay-300  ${
+              className={` ut-animation absolute top-[50%] left-[50%] z-20 -translate-y-[50%] -translate-x-[50%]
+              text-4xl font-bold uppercase delay-300 sm:text-2xl md:top-[22rem] md:-translate-y-0 lg:text-3xl   ${
                 currentWinner
                   ? "pointer-events-auto opacity-100"
                   : "pointer-events-none opacity-0"

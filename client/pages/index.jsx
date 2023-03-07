@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <div className="flex justify-center px-4">
-      <div className="min-h-screen w-full max-w-[55rem] py-14">
+      <div className="min-h-screen w-full max-w-[55rem] py-14 lg:py-8">
         {!gameMode ? <Menu /> : null}
         {gameMode == "computer" ? <ComputerMode /> : null}
         {gameMode == "pvp" ? roomJoined ? <PvpMode /> : <Room /> : null}

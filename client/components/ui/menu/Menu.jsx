@@ -16,20 +16,20 @@ const Menu = () => {
   return (
     <div className="flex h-full items-center justify-center ">
       <div className="flex w-full max-w-[30rem] flex-col items-center rounded-lg bg-white py-8 px-5">
-        <div className="mb-14">
+        <div className="mb-14 sm:mb-10">
           <Logo />
         </div>
 
         <div className="flex gap-3 text-lg font-medium">
           <button
             onClick={() => setOptions({ gameMode: "computer" })}
-            className="bg-colorBlue hover:bg-colorBlue2 ut-animation  w-[10rem] rounded-lg py-3"
+            className="bg-colorBlue hover:bg-colorBlue2 ut-animation w-[10rem]  rounded-lg py-3 sm:w-[8rem]"
           >
             Computer
           </button>
           <button
             onClick={() => setOptions({ gameMode: "pvp" })}
-            className="bg-colorBlue hover:bg-colorBlue2 ut-animation  w-[10rem] rounded-lg py-3"
+            className="bg-colorBlue hover:bg-colorBlue2 ut-animation w-[10rem]  rounded-lg py-3 sm:w-[8rem]"
           >
             PvP
           </button>

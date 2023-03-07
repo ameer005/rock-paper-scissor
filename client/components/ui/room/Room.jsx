@@ -55,7 +55,7 @@ const Room = () => {
       <div className="relative flex w-full max-w-[30rem] flex-col items-center rounded-lg bg-white py-8 px-5">
         {!optionState && (
           <>
-            <div className="mb-14">
+            <div className="mb-14 sm:mb-10">
               <Logo />
             </div>
             <div className="flex gap-3 text-lg font-medium text-white">
@@ -64,13 +64,13 @@ const Room = () => {
                   createRoom();
                   setOptionState("create");
                 }}
-                className="bg-colorBlue hover:bg-colorBlue2 ut-animation  w-[10rem] rounded-lg py-3"
+                className="bg-colorBlue hover:bg-colorBlue2 ut-animation  w-[10rem] rounded-lg py-3 sm:w-[8rem]"
               >
                 Create room
               </button>
               <button
                 onClick={() => setOptionState("join")}
-                className="bg-colorBlue hover:bg-colorBlue2 ut-animation  w-[10rem] rounded-lg py-3"
+                className="bg-colorBlue hover:bg-colorBlue2 ut-animation  w-[10rem] rounded-lg py-3 sm:w-[8rem]"
               >
                 Join room
               </button>
