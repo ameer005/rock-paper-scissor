@@ -27,7 +27,7 @@ const OptionButton = ({
       className={`bg-colorCyan ut-animation  relative  mt-2 flex ${outerDim} ${renderGradient()} ${globalStyle} items-center justify-center  rounded-full`}
     >
       <div
-        className={`flex ${innerDim} items-center justify-center rounded-full bg-white py-2`}
+        className={`flex ${innerDim} shadow_3d items-center justify-center rounded-full bg-white py-2`}
       >
         <Image
           className={`${iconWidth}`}

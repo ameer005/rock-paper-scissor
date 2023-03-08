@@ -61,6 +61,10 @@
   animation-iteration-count: infinite;
 }
 
+.shadow_3d {
+  box-shadow: inset 0px 6px 3px rgba(0, 0, 0, 0.326);
+}
+
 @keyframes waitingAnimation {
   from {
     transform: scale(1);
