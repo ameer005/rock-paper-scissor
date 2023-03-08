@@ -26,6 +26,20 @@ const PvpMode = () => {
     socket.on("receive-move", (move) => {
       setOpponentChoice(move);
     });
+
+    socket.on("user-left", (left) => {
+      if (left) {
+        setModalState({
+          showToastModal: true,
+          toastProperties: {
+            type: "error",
+            message: "user left the room",
+          },
+        });
+        setOptions({ gameMode: null });
+        setDataState({ roomId: null });
+      }
+    });
   }, []);
 
   // sending my move to socket

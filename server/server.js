@@ -57,6 +57,13 @@ io.on("connection", (socket) => {
     }
   });
 
+  socket.on("leave-room", (roomId) => {
+    if (io.sockets.adapter.rooms.get(roomId)) {
+      socket.leave(roomId);
+      socket.to(roomId).emit("user-left", true);
+    }
+  });
+
   // TODO delete room on leaving and notify the clietn so they can exit
   socket.on("disconnect", () => {
     console.log("user-disconnect");

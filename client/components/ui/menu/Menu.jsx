@@ -6,11 +6,17 @@ import Logo from "../logo/Logo";
 const Menu = () => {
   const setOptions = useStore((state) => state.setOptions);
   const setDataState = useStore((state) => state.setDataState);
+  const roomId = useStore((state) => state.roomId);
+  const socket = useStore((state) => state.socket);
 
   // pvp mode cleanup
   useEffect(() => {
     setOptions({ roomJoined: false });
-    setDataState({ roomId: null });
+
+    if (roomId) {
+      socket.emit("leave-room", roomId);
+      setDataState({ roomId: null });
+    }
   }, []);
 
   return (
