@@ -19,8 +19,6 @@ app.get("/", (req, res) => {
 });
 
 io.on("connection", (socket) => {
-  console.log(`connected ${socket.id}`);
-
   socket.on("create-room", (roomId) => {
     if (io.sockets.adapter.rooms[roomId]) {
       console.log("room already exist");
@@ -65,9 +63,7 @@ io.on("connection", (socket) => {
   });
 
   // TODO delete room on leaving and notify the clietn so they can exit
-  socket.on("disconnect", () => {
-    console.log("user-disconnect");
-  });
+  socket.on("disconnect", () => {});
 });
 
 const port = process.env.PORT || 5000;
