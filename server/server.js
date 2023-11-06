@@ -4,7 +4,7 @@ const app = express();
 const server = require("http").createServer(app);
 const io = require("socket.io")(server, {
   cors: {
-    origin: ["http://localhost:3000", "https://rps-front.up.railway.app"],
+    origin: ["http://localhost:3000", process.env.FRONTEND_URL],
   },
 });
 const dotenv = require("dotenv");
