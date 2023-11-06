@@ -4,7 +4,7 @@ let URL;
 if (process.env.NODE_ENV !== "production") {
   URL = "http://127.0.0.1:5000";
 } else {
-  URL = `${process.env.NEXT_PUBLIC_BACKEND_URL}`;
+  URL = `https://rps-bac.litegix.me`;
 }
 
 const dataSlice = (set, get) => ({
